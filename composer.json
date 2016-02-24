@@ -1,0 +1,8 @@
+{
+    "name": "kongr45gpen/bzion-stats",
+    "require": {
+        "nesbot/carbon": "^1.21"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

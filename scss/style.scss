@@ -1,0 +1,345 @@
+@import 'partials/mixins.scss';
+
+.testing {
+  width: percentage(5/7);
+  box-shadow: 1px 1px 4px 3px yellow;
+  text-shadow: 1px 1px 0px black;
+}
+
+body {
+  background: url(../imgs/11.jpg);
+  background-position: bottom right;
+  //
+  //background-image: url(../imgs/spectal_radiance.jpg);
+  //background-position: center center;
+
+  background-attachment: fixed;
+  background-color: #959595;
+}
+
+.container {
+  text-align: center;
+}
+
+.landing {
+  margin: auto;
+  text-align: center;
+
+  font-family: "Baumans", serif !important;
+  font-size: 20vw !important;
+
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+
+  opacity: 0.94;
+
+  display: inline-block;
+
+  margin-top: 20px !important;
+  margin-bottom: 0 !important;
+
+  //line-height: 1 !important;
+
+  //color: green !important;
+}
+
+header {
+  text-align: center;
+}
+
+.duration {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 1), 0 0 4px rgba(0, 0, 0, 0.7);
+
+  display: inline-block;
+  margin-top: 0 !important;
+  margin-bottom: 70px !important;
+
+  white-space: nowrap;
+}
+
+.site.container {
+  margin-bottom: 30px;
+}
+
+$SegmentMargin: 2rem;
+
+.segment:not(.attached) {
+  @include margin-plan($SegmentMargin !important);
+}
+
+.segment.top.attached {
+  margin-top: $SegmentMargin;
+}
+
+.segment.bottom.attached {
+  margin-bottom: $SegmentMargin;
+}
+
+//.segment
+
+.ui.table.segment {
+  margin: auto;
+  margin-bottom: 2rem;
+
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
+.ownership {
+  border: 0 !important;
+
+  td.single.line {
+    width: 600px;
+    max-width: 50vw;
+    //width: 500px !important; // TODO
+    padding: 0 !important;
+    margin: 0 !important;
+    //padding-left: 0;
+    //padding-right: 0;
+
+    .label {
+      margin-top: -6px;
+
+      &.last {
+        float: right;
+        margin-top: -3px;
+      }
+
+      &.red {
+        background-color: #bf0000 !important;
+      }
+    }
+  }
+}
+
+$BarHeight: 20px;
+
+.invisibar {
+  float: left;
+  height: $BarHeight;
+  vertical-align: middle;
+}
+
+//.invisibar {
+//  //margin-left: 5px;
+//}
+
+.bar {
+  @extend .invisibar;
+
+  background-color: darkred;
+  margin: 0;
+
+  &.last {
+    float: right;
+  }
+
+  &.red {
+    background-color: #bf0000;
+  }
+  &.blue {
+    background-color: #0074D9;
+  }
+  &.green {
+    background-color: #30b43e;
+  }
+  &.orange {
+    background-color: #FF851B;
+  }
+
+  box-sizing: content-box;
+  padding-right: 0.4px; // how is this even possible
+}
+
+
+
+.caret {
+  $Height: 63px;
+  $Padding: 50px;
+
+  background-color: rgba(125, 125, 125, 0.5);
+
+  position: relative;
+  width: 1px;
+  height: $Height + $Padding;
+  bottom: $Height - $BarHeight + $Padding/2;
+
+
+}
+
+.random.segment {
+  margin-top: 5em !important;
+  margin-bottom: 5em !important;
+}
+
+img.random {
+  //box-shadow: 2px 2px 10px rgba(50, 50, 10, 0.5);
+  max-width: 80vw;
+}
+
+
+//.bar {
+//  height: 20px;
+//  background-color: darkred;
+//  margin: 5px 0;
+//  float: left;
+//}
+
+@media only screen and (min-width: 1200px) {
+  .ui.site.container {
+    $padding: 25px;
+    $period: 140vh;
+
+    width: 1127px + 2*$padding;
+    padding: $padding;
+
+    background-color: rgba(0, 0, 0, 0.1);
+    background: repeating-linear-gradient(
+                    to bottom,
+                    rgba(0,0,0,0.1) 0%,
+                    rgba(0,0,0,0.2) $period,
+                    rgba(0,0,0,0.1) 2*$period
+    );
+    border-radius: 0.3rem;
+
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.5);
+  }
+}
+
+.nofill {
+  @include margin-sides(auto !important);
+
+
+  @media (min-width: 1024px) {
+    max-width: 70vw !important;
+  }
+}
+
+.chart {
+  overflow: visible;
+}
+
+.card .meta {
+  font-size: 7pt !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1023px) {
+  .statistics {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2em !important;
+
+    .statistic {
+      flex-direction: row;
+      align-items: center;
+      margin: 1em auto !important;
+      max-width: none;
+
+      .value {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 3rem;
+      }
+
+      .label {
+        display: inline-block;
+        vertical-align: middle;
+        //margin: 0 0 0 .75em;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .ui.cards .card {
+    width: calc(50% - 1.5em) !important;
+  }
+}
+
+.ui.eight.tiny.statistics {
+  //white-space: nowrap;
+  //overflow: hidden;
+  //height: 10px
+}
+
+.massive.statistic {
+  .value {
+    font-size: 14rem;
+    margin-right: 0.9rem;
+  }
+
+  .label {
+    font-size: 2rem;
+  }
+}
+
+
+@media (max-width: 1920px) and (max-height: 1440px) {
+  .hugescreen {
+    display: none;
+  }
+}
+
+@media (min-width: 1921px), (min-height: 1441px) {
+  body {
+    background-image: url(../imgs/spectal_radiance.jpg);
+  }
+
+  .ui.site.container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+  }
+
+  .bnag.segment {
+    background-color: rgba(255,255,255,0.91);
+  }
+}
+
+.comment {
+  font-size: 10.7pt;
+  color: #444;
+
+  &:before {
+    content: 'Editor\'s Note: ';
+  }
+}
+
+.statistic {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.credits {
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+
+  a {
+    color: #062635;
+    text-shadow: 0 0 2px rgba(50, 255, 255, 0.8);
+  }
+}
+
+canvas {
+  width: 100%;
+}
+
+footer.small {
+  padding: 10px !important;
+  font-size: 80%;
+}
+
+.cards {
+  margin-top: 4rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.bacon:hover::before {
+  content: 'Piece of ';
+}
+
+.bnag.inverted .comment {
+  color: #aaa;
+}
+
+.animated.button {
+  width: 20rem;
+}

@@ -1,0 +1,14 @@
+@mixin margin-sides($border) {
+  margin-left: $border;
+  margin-right: $border;
+}
+
+@mixin padding-sides($border) {
+  padding-left: $border;
+  padding-right: $border;
+}
+
+@mixin margin-plan($border) { // ???
+  margin-top: $border;
+  margin-bottom: $border;
+}
