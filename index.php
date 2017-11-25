@@ -397,7 +397,7 @@ $scrutinizer = "https://avatars1.githubusercontent.com/u/6253494?v=3&s=";
 
 <div class="ui container">
     <div class="ui basic segment">
-        <a class="ui animated inverted button" href="http://helit.tech/nagstats/">
+        <a class="ui animated inverted button" href="http://helit.org/nagstats/">
             <div class="visible content">This is a button.</div>
             <div class="hidden content">That takes you to the @nag stats page.</div>
         </a>
