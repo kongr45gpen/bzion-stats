@@ -46,7 +46,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@phab.helit.tech:222/diffusion/NAGS/nag-showcase.git"
+    "url": "ssh://git@phab.helit.org:222/diffusion/NAGS/nag-showcase.git"
   },
   "author": "",
   "license": ""
